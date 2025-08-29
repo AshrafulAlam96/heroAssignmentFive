@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Tailwind CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- External CSS -->
+  <link rel="stylesheet" href="/heroAssignmentFive/css/design.css">
+  <title>Emergency Services</title>
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="bg-white text-green px-6 py-3 flex justify-between items-center shadow-md">
+    <!-- Left: Logo + Website name -->
+    <div class="flex items-center space-x-3">
+      <div class="w-10 h-10 flex items-center justify-center bg-white rounded-full">
+        <img src="/heroAssignmentFive/assets/logo.png" alt="Hero Logo" />
+      </div>
+      <h1 class="text-xl font-bold text-green-800 leading-tight">
+        Emergency <br/> Services
+      </h1>
+    </div>
+
+    <!-- Right: Icons -->
+    <div class="flex items-center space-x-4">
+      <!-- Heart -->
+      <div id="heart-box" class="flex items-center space-x-1 bg-green-200 px-3 py-1 rounded-full">
+        <span id="heart-count" class="text-sm font-bold">0</span>
+        <img src="/heroAssignmentFive/assets/heart.png" alt="love-heart" class="w-5">
+      </div>
+
+      <!-- Coins -->
+      <div class="flex items-center space-x-1 bg-green-200 px-3 py-1 rounded-full">
+        <span id="coin-count" class="text-sm font-bold">100</span>
+        <img src="/heroAssignmentFive/assets/coin.png" alt="coin" class="w-5">
+      </div>
+
+      <!-- Copy Count -->
+      <div class="flex items-center space-x-1 bg-green-600 px-3 py-1 rounded-full">
+        <p class="text-white text-sm"><span id="copy-count" class="font-bold">0</span> Copy</p>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero-section">
+    <!-- Logo -->
+    <img src="/heroAssignmentFive/assets/logo-dark.png" alt="Hero Logo" class="hero-logo">
+
+    <!-- Title -->
+    <h2 class="hero-title">বাংলাদেশের জরুরি সেবা</h2>
+
+    <!-- Slogan -->
+    <p class="hero-slogan">
+      Government Emergency Services at Your Fingertips - A Project by Government of The People's Republic of Bangladesh
+    </p>
+  </section>
+
+  <!-- Main Section -->
+  <section class="bg-white px-6 py-10 grid grid-cols-1 lg:grid-cols-3 gap-6">
+    <!-- Card Section -->
+    <div class="lg:col-span-2">
+      <div id="card-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <!-- Cards will be dynamically inserted OR you can hardcode them here -->
+      </div>
+    </div>
+
+    <!-- History Section -->
+    <div class="bg-white border rounded-2xl shadow-md p-4">
+      <!-- Title Row -->
+      <div class="flex justify-between items-center mb-4">
+        <h2 class="text-xl font-bold text-black-800 flex items-center gap-2">
+         <img src="/heroAssignmentFive/assets/history.png" alt="call history" class="w-5"> Call History
+        </h2>
+        <button id="clear-history" class="flex items-center justify-center gap-1 bg-green-600 hover:bg-green-700 text-white py-2 rounded-2xl text-sm w-1/3">
+          Clear
+        </button>
+      </div>
+
+      <!-- History List -->
+      <ul id="history-list" class="space-y-3 text-sm text-gray-700">
+        <!-- dynamically filled by JS -->
+      </ul>
+    </div>
+  </section>
+
+  <!-- JS -->
+  <script src="/heroAssignmentFive/js/app.js"></script>
+</body>
+</html>
